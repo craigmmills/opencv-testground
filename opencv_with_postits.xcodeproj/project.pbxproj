@@ -1,0 +1,201 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F4943DF138B0CE200AC0226 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F4943DE138B0CE200AC0226 /* main.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F4943D8138B0CE200AC0226 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4F4943DA138B0CE200AC0226 /* opencv_with_postits */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opencv_with_postits; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4943DE138B0CE200AC0226 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4F4943E0138B0CE200AC0226 /* opencv_with_postits.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = opencv_with_postits.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F4943D7138B0CE200AC0226 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F4943CF138B0CE100AC0226 = {
+			isa = PBXGroup;
+			children = (
+				4F4943DD138B0CE200AC0226 /* opencv_with_postits */,
+				4F4943DB138B0CE200AC0226 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F4943DB138B0CE200AC0226 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F4943DA138B0CE200AC0226 /* opencv_with_postits */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F4943DD138B0CE200AC0226 /* opencv_with_postits */ = {
+			isa = PBXGroup;
+			children = (
+				4F4943DE138B0CE200AC0226 /* main.c */,
+				4F4943E0138B0CE200AC0226 /* opencv_with_postits.1 */,
+			);
+			path = opencv_with_postits;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F4943D9138B0CE200AC0226 /* opencv_with_postits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F4943E3138B0CE200AC0226 /* Build configuration list for PBXNativeTarget "opencv_with_postits" */;
+			buildPhases = (
+				4F4943D6138B0CE200AC0226 /* Sources */,
+				4F4943D7138B0CE200AC0226 /* Frameworks */,
+				4F4943D8138B0CE200AC0226 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = opencv_with_postits;
+			productName = opencv_with_postits;
+			productReference = 4F4943DA138B0CE200AC0226 /* opencv_with_postits */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F4943D1138B0CE100AC0226 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "UNEP-WCMC";
+			};
+			buildConfigurationList = 4F4943D4138B0CE100AC0226 /* Build configuration list for PBXProject "opencv_with_postits" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4F4943CF138B0CE100AC0226;
+			productRefGroup = 4F4943DB138B0CE200AC0226 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F4943D9138B0CE200AC0226 /* opencv_with_postits */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F4943D6138B0CE200AC0226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4943DF138B0CE200AC0226 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4F4943E1138B0CE200AC0226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4F4943E2138B0CE200AC0226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4F4943E4138B0CE200AC0226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4F4943E5138B0CE200AC0226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F4943D4138B0CE100AC0226 /* Build configuration list for PBXProject "opencv_with_postits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4943E1138B0CE200AC0226 /* Debug */,
+				4F4943E2138B0CE200AC0226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F4943E3138B0CE200AC0226 /* Build configuration list for PBXNativeTarget "opencv_with_postits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4943E4138B0CE200AC0226 /* Debug */,
+				4F4943E5138B0CE200AC0226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F4943D1138B0CE100AC0226 /* Project object */;
+}
