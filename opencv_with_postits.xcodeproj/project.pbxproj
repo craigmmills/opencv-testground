@@ -37,6 +37,7 @@
 		4F4943EC138B0EBD00AC0226 /* libhighgui.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhighgui.2.1.0.dylib; path = ../../../../../../usr/local/lib/libhighgui.2.1.0.dylib; sourceTree = "<group>"; };
 		4F4943ED138B0EBD00AC0226 /* libml.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libml.2.1.0.dylib; path = ../../../../../../usr/local/lib/libml.2.1.0.dylib; sourceTree = "<group>"; };
 		4F7CA2011393B0FB007D1810 /* postits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = postits.jpg; sourceTree = "<group>"; };
+		4F7CA2021393C984007D1810 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		4FF37F7E138B9BAA003CA398 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +81,7 @@
 				4F4943DE138B0CE200AC0226 /* main.c */,
 				4F4943E0138B0CE200AC0226 /* opencv_with_postits.1 */,
 				4FF37F7E138B9BAA003CA398 /* notes.txt */,
+				4F7CA2021393C984007D1810 /* README.txt */,
 			);
 			path = opencv_with_postits;
 			sourceTree = "<group>";
