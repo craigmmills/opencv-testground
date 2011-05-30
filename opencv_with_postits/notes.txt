@@ -1,0 +1,21 @@
+other areas of possible detection
+
+1.  Look for clear variation in colour
+2.  Once squares are selected, detect bi-patterns in freq distribution
+3.  Maybe only once these other filters are used, go greyscale/contour/generalise and angles
+
+I wonder if there is a way to have a moving window and scan for clear changes in clour pattern... perhaps thats what the contours are doing....
+
+need to investigate points of detection with current process.
+
+
+
+WE HAVE TO TEACH IT!
+
+use a few learning images with already marked out post-its and review the params found 
+
+params to use...
+
+1.  colour
+2.  distribution in greyscale
+3. ...

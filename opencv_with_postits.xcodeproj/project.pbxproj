@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4F4943DF138B0CE200AC0226 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F4943DE138B0CE200AC0226 /* main.c */; };
+		4F4943EE138B0EBD00AC0226 /* libcv.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4943E9138B0EBD00AC0226 /* libcv.2.1.0.dylib */; };
+		4F4943EF138B0EBD00AC0226 /* libcvaux.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4943EA138B0EBD00AC0226 /* libcvaux.2.1.0.dylib */; };
+		4F4943F0138B0EBD00AC0226 /* libcxcore.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4943EB138B0EBD00AC0226 /* libcxcore.2.1.0.dylib */; };
+		4F4943F1138B0EBD00AC0226 /* libhighgui.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4943EC138B0EBD00AC0226 /* libhighgui.2.1.0.dylib */; };
+		4F4943F2138B0EBD00AC0226 /* libml.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4943ED138B0EBD00AC0226 /* libml.2.1.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +31,14 @@
 		4F4943DA138B0CE200AC0226 /* opencv_with_postits */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opencv_with_postits; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4943DE138B0CE200AC0226 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		4F4943E0138B0CE200AC0226 /* opencv_with_postits.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = opencv_with_postits.1; sourceTree = "<group>"; };
+		4F4943E9138B0EBD00AC0226 /* libcv.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcv.2.1.0.dylib; path = ../../../../../../usr/local/lib/libcv.2.1.0.dylib; sourceTree = "<group>"; };
+		4F4943EA138B0EBD00AC0226 /* libcvaux.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcvaux.2.1.0.dylib; path = ../../../../../../usr/local/lib/libcvaux.2.1.0.dylib; sourceTree = "<group>"; };
+		4F4943EB138B0EBD00AC0226 /* libcxcore.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcxcore.2.1.0.dylib; path = ../../../../../../usr/local/lib/libcxcore.2.1.0.dylib; sourceTree = "<group>"; };
+		4F4943EC138B0EBD00AC0226 /* libhighgui.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhighgui.2.1.0.dylib; path = ../../../../../../usr/local/lib/libhighgui.2.1.0.dylib; sourceTree = "<group>"; };
+		4F4943ED138B0EBD00AC0226 /* libml.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libml.2.1.0.dylib; path = ../../../../../../usr/local/lib/libml.2.1.0.dylib; sourceTree = "<group>"; };
+		4F4943FB138B0F5C00AC0226 /* postits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = postits.png; path = ../../../ruby/sticky_move/postits.png; sourceTree = "<group>"; };
+		4F4943FC138B143D00AC0226 /* postits2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = postits2.jpg; path = ../../../../../Downloads/postits2.jpg; sourceTree = "<group>"; };
+		4FF37F7E138B9BAA003CA398 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4943EE138B0EBD00AC0226 /* libcv.2.1.0.dylib in Frameworks */,
+				4F4943EF138B0EBD00AC0226 /* libcvaux.2.1.0.dylib in Frameworks */,
+				4F4943F0138B0EBD00AC0226 /* libcxcore.2.1.0.dylib in Frameworks */,
+				4F4943F1138B0EBD00AC0226 /* libhighgui.2.1.0.dylib in Frameworks */,
+				4F4943F2138B0EBD00AC0226 /* libml.2.1.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 		4F4943CF138B0CE100AC0226 = {
 			isa = PBXGroup;
 			children = (
+				4F4943E6138B0DCC00AC0226 /* OpenCV Frameworks */,
 				4F4943DD138B0CE200AC0226 /* opencv_with_postits */,
 				4F4943DB138B0CE200AC0226 /* Products */,
 			);
@@ -58,10 +77,25 @@
 		4F4943DD138B0CE200AC0226 /* opencv_with_postits */ = {
 			isa = PBXGroup;
 			children = (
+				4F4943FC138B143D00AC0226 /* postits2.jpg */,
+				4F4943FB138B0F5C00AC0226 /* postits.png */,
 				4F4943DE138B0CE200AC0226 /* main.c */,
 				4F4943E0138B0CE200AC0226 /* opencv_with_postits.1 */,
+				4FF37F7E138B9BAA003CA398 /* notes.txt */,
 			);
 			path = opencv_with_postits;
+			sourceTree = "<group>";
+		};
+		4F4943E6138B0DCC00AC0226 /* OpenCV Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F4943E9138B0EBD00AC0226 /* libcv.2.1.0.dylib */,
+				4F4943EA138B0EBD00AC0226 /* libcvaux.2.1.0.dylib */,
+				4F4943EB138B0EBD00AC0226 /* libcxcore.2.1.0.dylib */,
+				4F4943EC138B0EBD00AC0226 /* libhighgui.2.1.0.dylib */,
+				4F4943ED138B0EBD00AC0226 /* libml.2.1.0.dylib */,
+			);
+			name = "OpenCV Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +194,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/opencv/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -171,6 +206,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/opencv/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -194,6 +230,7 @@
 				4F4943E5138B0CE200AC0226 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
