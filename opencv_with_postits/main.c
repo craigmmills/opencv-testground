@@ -36,18 +36,43 @@ double angle( CvPoint* pt1, CvPoint* pt2, CvPoint* pt0 )
 }
 
 
-//CM  function to draw out each of the stages to se where it is missing each section
+//CM  function to draw out each of the stages
 void draw_stuff(IplImage* img)
 {
     
-    // create window with name "check stuff"
-    cvNamedWindow( "check stuff", 1 );
+    //set up rnadom window name to capture each stage of the process
+    char my_letters[] = "abcdefghijklmnopqrstuvwxyz";
+    char ran_str[15] = "image:";
+    
+    srand((unsigned)time(NULL)); //seed rand
+    
+    int i;
+    int t;
+    
+    
+    //temp string constant to convert single char to string
+    char temp[2];
+    temp[1] = '\0';
+    
+    
+    //concatenate rand chars to string
+    for(i = 0; i < 8;i++){
+        
+        t = rand() % 27;
+        temp[0] = my_letters[t];
+
+        /* or however long you want it */
+        strcat(ran_str, temp );
+    }
+    
+    // create window with the random generated name
+    cvNamedWindow( ran_str, 1 );
     
     //take copy of image
     IplImage* cpy = cvCloneImage( img );
     
-    // show the resultant image
-    cvShowImage("check stuff",cpy);
+    // show the resultant image in new window
+    cvShowImage(ran_str,cpy);
     cvReleaseImage( &cpy );
 }
 
@@ -98,22 +123,27 @@ CvSeq* findSquares4( IplImage* img, CvMemStorage* storage )
                 // apply Canny. Take the upper threshold from slider
                 // and set the lower to 0 (which forces edges merging) 
                 cvCanny( tgray, gray, 0, thresh, 5 );
+                
+                
                 // dilate canny output to remove potential
                 // holes between edge segments 
                 cvDilate( gray, gray, 0, 1 );
+                
+                
             }
             else
             {
                 // apply threshold if l!=0:
                 //     tgray(x,y) = gray(x,y) < (l+1)*255/N ? 255 : 0
                 cvThreshold( tgray, gray, (l+1)*255/N, 255, CV_THRESH_BINARY );
+                
             }
             
             // find contours and store them all as a list
             cvFindContours( gray, storage, &contours, sizeof(CvContour),
 						   CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE, cvPoint(0, 0));
             
-           
+       
             
             // test each contour
             while( contours )
@@ -223,13 +253,14 @@ void drawSquares( IplImage* img, CvSeq* squares )
 
 
 
+
 void on_trackbar( int a )
 {
     if( img )
         drawSquares( img, findSquares4( img, storage ) );
 }
 
-char* names[] = { "[path to postit file]", "[can be a few]" };
+char* names[] = { "/Users/craigmills/Documents/code/c/opencv_with_postits/opencv_with_postits/postits.jpg" };
 
 int main(int argc, char** argv)
 {
