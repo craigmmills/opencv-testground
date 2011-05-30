@@ -223,14 +223,13 @@ void drawSquares( IplImage* img, CvSeq* squares )
 
 
 
-
 void on_trackbar( int a )
 {
     if( img )
         drawSquares( img, findSquares4( img, storage ) );
 }
 
-char* names[] = { "/Users/craigmills/Documents/code/ruby/sticky_move/postits.png" };
+char* names[] = { "[path to postit file]", "[can be a few]" };
 
 int main(int argc, char** argv)
 {

@@ -36,8 +36,7 @@
 		4F4943EB138B0EBD00AC0226 /* libcxcore.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcxcore.2.1.0.dylib; path = ../../../../../../usr/local/lib/libcxcore.2.1.0.dylib; sourceTree = "<group>"; };
 		4F4943EC138B0EBD00AC0226 /* libhighgui.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhighgui.2.1.0.dylib; path = ../../../../../../usr/local/lib/libhighgui.2.1.0.dylib; sourceTree = "<group>"; };
 		4F4943ED138B0EBD00AC0226 /* libml.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libml.2.1.0.dylib; path = ../../../../../../usr/local/lib/libml.2.1.0.dylib; sourceTree = "<group>"; };
-		4F4943FB138B0F5C00AC0226 /* postits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = postits.png; path = ../../../ruby/sticky_move/postits.png; sourceTree = "<group>"; };
-		4F4943FC138B143D00AC0226 /* postits2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = postits2.jpg; path = ../../../../../Downloads/postits2.jpg; sourceTree = "<group>"; };
+		4F7CA2011393B0FB007D1810 /* postits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = postits.jpg; sourceTree = "<group>"; };
 		4FF37F7E138B9BAA003CA398 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,8 +76,7 @@
 		4F4943DD138B0CE200AC0226 /* opencv_with_postits */ = {
 			isa = PBXGroup;
 			children = (
-				4F4943FC138B143D00AC0226 /* postits2.jpg */,
-				4F4943FB138B0F5C00AC0226 /* postits.png */,
+				4F7CA2011393B0FB007D1810 /* postits.jpg */,
 				4F4943DE138B0CE200AC0226 /* main.c */,
 				4F4943E0138B0CE200AC0226 /* opencv_with_postits.1 */,
 				4FF37F7E138B9BAA003CA398 /* notes.txt */,
