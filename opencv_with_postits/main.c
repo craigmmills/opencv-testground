@@ -37,7 +37,7 @@ double angle( CvPoint* pt1, CvPoint* pt2, CvPoint* pt0 )
 
 
 //CM  function to draw out each of the stages
-void draw_stuff(IplImage* img)
+void draw_stuff(IplImage* draw_img)
 {
     
     //set up rnadom window name to capture each stage of the process
@@ -68,13 +68,19 @@ void draw_stuff(IplImage* img)
     // create window with the random generated name
     cvNamedWindow( ran_str, 1 );
     
+    printf("%s\n",ran_str);
     //take copy of image
-    IplImage* cpy = cvCloneImage( img );
+    IplImage* cpy = cvCloneImage( draw_img );
     
     // show the resultant image in new window
     cvShowImage(ran_str,cpy);
     cvReleaseImage( &cpy );
+    cvWaitKey(0);
+    cvDestroyWindow(ran_str);
 }
+
+
+
 
 
 //try a different technique using obvious clumps of colour in the colour histogram
@@ -163,21 +169,7 @@ void createHistogram(IplImage* src)
 CvSeq* findSquares4( IplImage* img, CvMemStorage* storage )
 {
     
-    
-    //look at only one plane to get the squares:
-    // Compute the HSV image and decompose it into separate planes.
-    //
-    IplImage* hsv = cvCreateImage( cvGetSize(img), 8, 3 );
-    cvCvtColor( img, hsv, CV_BGR2HSV );
-    IplImage* h_plane = cvCreateImage( cvGetSize(img), 8, 1 );
-    IplImage* s_plane = cvCreateImage( cvGetSize(img), 8, 1 );
-    IplImage* v_plane = cvCreateImage( cvGetSize(img), 8, 1 );
-    cvCvtPixToPlane( hsv, h_plane, s_plane, v_plane, 0 );
-    draw_stuff(s_plane);
-    
-    //img = s_plane;
-
-    
+        
     CvSeq* contours;
     int i, c, l, N = 11;
     CvSize sz = cvSize( img->width & -2, img->height & -2 );
@@ -210,6 +202,7 @@ CvSeq* findSquares4( IplImage* img, CvMemStorage* storage )
         
         cvCopy( timg, tgray, 0 );
         
+                
         // try several threshold levels
         for( l = 0; l < N; l++ )
         {
@@ -219,8 +212,11 @@ CvSeq* findSquares4( IplImage* img, CvMemStorage* storage )
             {
                 // apply Canny. Take the upper threshold from slider
                 // and set the lower to 0 (which forces edges merging) 
-                cvCanny( tgray, gray, 0, thresh, 5 );
+                cvCanny( tgray, gray, 100, 203, 5 );
+                printf("%d\n",thresh);
                 
+                draw_stuff(gray);
+
                 
                 // dilate canny output to remove potential
                 // holes between edge segments 
@@ -368,7 +364,7 @@ int main(int argc, char** argv)
     cvNamedWindow( "image", 1 );
     // create trackbar (slider) with parent "image" and set callback
     // (the slider regulates upper threshold, passed to Canny edge detector) 
-    cvCreateTrackbar( "thresh1", "image", &thresh, 1000, on_trackbar );
+    //cvCreateTrackbar( "thresh1", "image", &thresh, 1000, on_trackbar );
     
     for( i = 0; i < 6; i++ )
     {
@@ -386,7 +382,8 @@ int main(int argc, char** argv)
         //createHistogram(img);
         
         // force the image processing
-        on_trackbar(0);
+        drawSquares( img, findSquares4( img, storage ) );
+        //on_trackbar(0);
         // wait for key.
         // Also the function cvWaitKey takes care of event processing
         cvWaitKey(0);
